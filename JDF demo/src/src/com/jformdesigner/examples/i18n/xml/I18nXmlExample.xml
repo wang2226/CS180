@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="I18nXmlTest.button1.text">Cancel</entry>
+<entry key="I18nXmlTest.label1.text">english text</entry>
+</properties>

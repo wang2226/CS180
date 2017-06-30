@@ -1,0 +1,337 @@
+JFDML JFormDesigner: "5.2.4.1.329" Java: "1.8.0_112-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp loginStatus::t::0:x, seq l {space :p:60:p, comp LoginButton:::p:90:p, space ::120:x, comp RegisterButton:::p:90:p, space :p:80:p}, seq l {space :p:32:p, par l {comp passwordLabel:::p:80:p, comp usernameLabel:::p:80:p}, space ::104:x, par l {comp passwordField::t:p:182:p, comp username::t:p:182:p}, space :p:42:p}, seq l {comp loginUser::::434:x, space :::p}}"
+			"$verticalGroup": "par l {seq l {comp loginUser:::p:31:p, space :p:64:p, par l {comp usernameLabel:::p::p, comp username:::p::p}, space :p:19:p, par b {comp passwordLabel::b:p::p, comp passwordField::b:p::p}, space :::x, par b {comp LoginButton::b:p::p, comp RegisterButton::b:p::p}, space u:::p, comp loginStatus:::p::p}}"
+		} ) {
+			name: "loginPanel"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "usernameLabel"
+				"text": "Username"
+				"labelFor": new FormReference( "username" )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "passwordLabel"
+				"text": "Password"
+				"labelFor": new FormReference( "passwordField" )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "username"
+			} )
+			add( new FormComponent( "javax.swing.JPasswordField" ) {
+				name: "passwordField"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "loginStatus"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "LoginButton"
+				"text": "Login"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "LoginButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "RegisterButton"
+				"text": "Register"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "RegisterButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "loginUser"
+				"text": "FoilMaker!"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 35, 2470 )
+			"size": new java.awt.Dimension( 440, 256 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :::p, par t {comp playgameUser::::422:x, seq t {comp startgameButton:::p::p, space s:::p, comp joinButton:::p::p, space s:::p, comp playgameLogout:::p::p, space :0:55:x}, comp playgameStatus::l::422:x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :p:14:p, comp playgameUser:::p::p, space :p:60:p, par b {comp startgameButton:1:b:p::p, comp joinButton:1:b:p::p, comp playgameLogout:1:b:p::p}, space :p:78:p, comp playgameStatus:::p::p, space ::31:x}}"
+		} ) {
+			name: "playgamePanel"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "playgameStatus"
+				"text": "Welcome!"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "startgameButton"
+				"text": "Start New Game"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "startgameButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "joinButton"
+				"text": "Join a Game"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "joinButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "playgameLogout"
+				"text": "Logout"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "playgameLogoutActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "playgameUser"
+				"text": "text"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 55, 395 )
+			"size": new java.awt.Dimension( 434, 261 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:45:p, par l {comp gamekeyLabel::l:p:348:p, seq l {comp startnewgameButton:::p::p, space :p:55:p, comp startgameLogout:::p:104:p}}}, seq l {space :::p, comp startgameStatus:::p:426:p}, seq l {space :::p, comp startgameUser:::p:401:p}, seq l {space :p:164:p, comp gamekeyField:::p:93:p}, seq l {space :p:105:p, comp participantsPanel:::p::p}}"
+			"$verticalGroup": "par l {seq l {space :p:12:p, comp startgameUser:::p::p, space :::p, comp gamekeyLabel:::p::p, space u:::p, comp gamekeyField:::p::p, space :::p, comp participantsPanel:::p::p, space :::x, par b {comp startnewgameButton::b:p::p, comp startgameLogout::b:p::p}, space :::p, comp startgameStatus:::p::p, space :::p}}"
+		} ) {
+			name: "startnewgamePanel"
+			"border": new javax.swing.border.TitledBorder( "" )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "startgameStatus"
+				"text": "Game Started: You are the leader"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "startnewgameButton"
+				"text": "Start Game"
+				"enabled": false
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "startnewgameButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "startgameLogout"
+				"text": "Logout"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "startgameLogoutActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "gamekeyLabel"
+				"text": "Others should use this key to join your game"
+				"horizontalAlignment": 0
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp ParticipantsList::::197:x, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp ParticipantsList:::p:88:p, space :::x}}"
+			} ) {
+				name: "participantsPanel"
+				"border": new javax.swing.border.TitledBorder( "Participants" )
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "ParticipantsList"
+					"background": sfield java.awt.Color orange
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "startgameUser"
+				"text": "text"
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "gamekeyField"
+				"text": "text"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 55, 690 )
+			"size": new java.awt.Dimension( 434, 261 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq l {space :::p, comp joingameStatus:::p:439:p}, seq l {space :p:161:p, comp joingamekeyField:::p:109:p}, seq l {space :p:56:p, par l {comp joingamekeyLabel:::p:348:p, seq {comp joingameButton:::p::p, space :p:48:p, comp joingameLogout:::p:120:p}}}}, space :0:0:x}, seq l {space :::p, comp joingameUser:::p:422:p, space :::x}}"
+			"$verticalGroup": "par l {seq l {space ::21:x, comp joingameUser:::p::p, space s:::p, comp joingamekeyLabel:::p::p, space :p:26:p, comp joingamekeyField:::p::p, space s:::p, par b {comp joingameButton::b:p::p, comp joingameLogout::b:p::p}, space :p:52:p, comp joingameStatus:::p::p, space :::p}}"
+		} ) {
+			name: "joingamePanel"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "joingameStatus"
+				"text": "Welcome!"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "joingameButton"
+				"text": "Join Game"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "joingameButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "joingameLogout"
+				"text": "Logout"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "joingameLogoutActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "joingamekeyLabel"
+				"text": "enter the game key to join a game"
+				"labelFor": new FormReference( "joingamekeyField" )
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "joingamekeyField"
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "joingameUser"
+				"text": "text"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 55, 985 )
+			"size": new java.awt.Dimension( 434, 261 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:56:p, comp waitgameLabel:::p:348:p}, seq l {space :::p, comp waitgameStatus:::p:422:p}, seq l {space :p:162:p, comp waitgameLogout:::p:120:p}, seq l {space :p:21:p, comp waitgameUser:::p:398:p}}, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp waitgameUser:::p::p, space ::28:x, comp waitgameLabel:::p::p, space :p:68:p, comp waitgameLogout:::p::p, space :p:59:p, comp waitgameStatus:::p::p, space :::p}}"
+		} ) {
+			name: "waitgamePanel"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "waitgameStatus"
+				"text": "Joined game: waiting for leader"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "waitgameLogout"
+				"text": "Logout"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "waitgameLogoutActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "waitgameLabel"
+				"text": "Waiting for leader........"
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "waitgameUser"
+				"text": "text"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 45, 1280 )
+			"size": new java.awt.Dimension( 434, 261 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, comp inputsuggestionStatus:::p:439:p}, seq t {par t {seq t {space :p:65:p, par t {comp givewordField::l::0:x, seq l {comp submitButton:::p::p, space :::x, comp suggestionLogout:::p:120:p}, comp inputsuggestionPanel::t:::x}}, seq l {space :::p, par l {seq l {space :6:6:p, comp wordLabel:::p:336:p, space :0:0:x}, comp inputsugesstionUser:::::x}}}, space :p:71:p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp inputsugesstionUser:::p::p, space u:::p, comp wordLabel:::p::p, space :::p, comp givewordField:::p:72:p, space :::p, comp inputsuggestionPanel::::35:x, space s:::p, par t {comp suggestionLogout:::p::p, comp submitButton:::p::p}, space :::p, comp inputsuggestionStatus:::p::p, space :::p}}"
+		} ) {
+			name: "suggestionPanel"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "inputsuggestionStatus"
+				"text": "Enter  your suggestion"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "suggestionLogout"
+				"text": "Logout"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "suggestionLogoutActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "wordLabel"
+				"text": "What is the word for"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "submitButton"
+				"text": "Submit Suggestion"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submitButtonActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "givewordField"
+				"background": sfield java.awt.Color orange
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::x, comp suggestionField:::p:288:p, space :::p}}"
+				"$verticalGroup": "par l {seq t {space :::x, comp suggestionField:::p::p, space :::p}}"
+			} ) {
+				name: "inputsuggestionPanel"
+				"border": new javax.swing.border.TitledBorder( "Your Suggestion" )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "suggestionField"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "inputsugesstionUser"
+				"text": "text"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 50, 1575 )
+			"size": new java.awt.Dimension( 434, 261 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {comp giveanswerUser::l:p:426:p, comp giveanswerStatus::l:p:425:p}, space :0:0:x}, seq t {space ::8:x, par l {comp pickoptionLabel::t:p:420:p, seq t {comp submitoptionButton:::p::p, space :p:92:p, comp giveanswerLogout:::p:105:p, space :p:72:p}, seq t {comp radiobuttonPanel:::p:157:p, space :p:153:p}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp giveanswerUser:::p::p, space :::p, comp pickoptionLabel:::p::p, space :::p, comp radiobuttonPanel::::121:x, space :::p, par b {comp giveanswerLogout::b:p::p, comp submitoptionButton::b:p::p}, space :::p, comp giveanswerStatus:::p::p, space :::p}}"
+		} ) {
+			name: "giveanswerPanel"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "giveanswerUser"
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "giveanswerStatus"
+				"text": "Pick your choice"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "giveanswerLogout"
+				"text": "Logout"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "giveanswerLogoutActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "pickoptionLabel"
+				"text": "Pick your option below"
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "submitoptionButton"
+				"text": "Submit Option"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submitoptionButtonActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+				"axis": 1
+			} ) {
+				name: "radiobuttonPanel"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 45, 1880 )
+			"size": new java.awt.Dimension( 434, 261 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq l {space :::p, comp showResultStatus:::p:439:p}, seq l {space :p:78:p, comp nextroundButton:::p::p, space :p:67:p, comp showResultLogout:::p:120:p}}, space :0:0:x}, seq t {space :::p, par t {comp showresultUser:::::x, seq t {space :0:0:x, par l:::p {comp roundresultPanel::t:::x, comp overallresultsscrollPane::t::390:x}}}, space :p:27:p}}"
+			"$verticalGroup": "par l {seq l {space :p:12:p, comp showresultUser:::p::p, space :::p, comp roundresultPanel:::p::p, space :::x, comp overallresultsscrollPane:::p:92:p, space :::p, par b {comp showResultLogout::b:p::p, comp nextroundButton::b:p::p}, space s:::p, comp showResultStatus:::p::p, space :::p}}"
+		} ) {
+			name: "showresultPanel"
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "showResultStatus"
+				"text": "Click <Next Round> when ready"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "showResultLogout"
+				"text": "Logout"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "showresultLogoutActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "nextroundButton"
+				"text": "Next Round"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nextroundButtonActionPerformed", true ) )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {comp roundresultField::::372:x, space :::p}}"
+				"$verticalGroup": "par l {comp roundresultField:::p::p}"
+			} ) {
+				name: "roundresultPanel"
+				"background": sfield java.awt.Color white
+				"border": new javax.swing.border.TitledBorder( "Round Result" )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "roundresultField"
+					"background": sfield java.awt.Color orange
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "overallresultsscrollPane"
+				"viewportBorder": new javax.swing.border.TitledBorder( "Overall Results" )
+				add( new FormComponent( "javax.swing.JList" ) {
+					name: "OverallresultsList"
+					"background": sfield java.awt.Color yellow
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "showresultUser"
+				"text": "text"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 40, 2165 )
+			"size": new java.awt.Dimension( 434, 261 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.CardLayout ) ) {
+			name: "mainPanel"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 55, 90 )
+			"size": new java.awt.Dimension( 435, 260 )
+		} )
+	}
+}

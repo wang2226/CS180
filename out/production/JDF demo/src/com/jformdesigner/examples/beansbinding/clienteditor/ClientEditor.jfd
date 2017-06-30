@@ -1,0 +1,201 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq t {space :::p, par t {comp clientInfoPane::l::370:x:1, seq l {comp clientInfoLabel:::p::p, space :::p, comp usernameLabel::::248:x}, comp validationMsgLabel::l::370:x:2}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :p::p, par b {comp clientInfoLabel::b:p:27:p, comp usernameLabel::b:p:27:p}, space u:p::p, comp clientInfoPane:::::x, space :p:5:p, comp validationMsgLabel:::p:18:p, space :p::p}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JTabbedPane", new FormLayoutManager( class javax.swing.JTabbedPane ) ) {
+				name: "clientInfoPane"
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp sexLabel::l:p::p, seq l {par l {comp firstNameLabel::l:p::p, comp surnameLabel::l:p::p, comp maritalStatusLabel::l:p::p, comp ageLabel::l:p::p}, space :p:7:p, par l {seq {comp maleRadioButton:::p::p:1, space :::p, comp femaleRadioButton:::p::p}, comp firstNameTextField::l::265:x:2, comp surnameTextField::l::265:x:2, par t:l::p {comp ageTextField::l:::x:1, comp maritalComboBox::l:::x:1}}}}, space :p::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par b {comp firstNameLabel::b:p::p, comp firstNameTextField::b:p::p}, space :::p, par b {comp surnameLabel::b:p::p, comp surnameTextField::b:p::p}, space :::p, par b {comp maritalStatusLabel::b:p::p, comp maritalComboBox::b:p::p}, space :::p, par b {comp ageLabel::b:p::p, comp ageTextField::b:p::p}, space :::p, par b {comp sexLabel::b:p::p, comp femaleRadioButton::b:p::p, comp maleRadioButton::b:p::p}, space :::x}}"
+				} ) {
+					name: "personalPanel"
+					"border": new javax.swing.border.EtchedBorder( 1, null, null )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "firstNameLabel"
+						"text": "First Name:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "firstNameTextField"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "surnameLabel"
+						"text": "Surname:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "surnameTextField"
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "maritalComboBox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Single"
+							addElement( "Single" )
+							addElement( "Married" )
+							addElement( "Separated" )
+							addElement( "Divorced" )
+						}
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "sexLabel"
+						"text": "Sex:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "maritalStatusLabel"
+						"text": "Marital status:"
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "maleRadioButton"
+						"$buttonGroup": new FormReference( "sexButtonGroup" )
+						"text": "male"
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "femaleRadioButton"
+						"$buttonGroup": new FormReference( "sexButtonGroup" )
+						"text": "female"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "ageLabel"
+						"text": "Age:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "ageTextField"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Personal"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :::p, par l {comp nicknameLabel::l:p::p, comp emailLabel::l:p::p, comp webLabel::l:p::p, comp imLabel::l:p::p}, space :::p, par l {comp nicknameTextField::l::288:x, comp emailTextField::l::288:x, comp webTextField::l::288:x, comp imTextField::l::288:x}, space :::p}}"
+					"$verticalGroup": "par l {seq l {space :::p, par b {comp nicknameLabel::b:p::p, comp nicknameTextField::b:p::p}, space :::p, par b {comp emailLabel::b:p::p, comp emailTextField::b:p::p}, space :::p, par b {comp webLabel::b:p::p, comp webTextField::b:p::p}, space :::p, par b {comp imLabel::b:p::p, comp imTextField::b:p::p}, space ::34:x}}"
+				} ) {
+					name: "contactPanel"
+					"border": new javax.swing.border.EtchedBorder( 1, null, null )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "nicknameLabel"
+						"text": "Nickname:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "emailLabel"
+						"text": "E-mail:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "webLabel"
+						"text": "Web:"
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "imLabel"
+						"text": "IM:"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "nicknameTextField"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "emailTextField"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "webTextField"
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "imTextField"
+					} )
+				}, new FormLayoutConstraints( null ) {
+					"title": "Contact"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "usernameLabel"
+				"font": new java.awt.Font( "Dialog", 1, 24 )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "clientInfoLabel"
+				"font": new java.awt.Font( "Dialog", 0, 24 )
+				"text": "Client Info:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "validationMsgLabel"
+				"font": new java.awt.Font( "Dialog", 1, 11 )
+				"foreground": new java.awt.Color( 255, 0, 0, 255 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "sexButtonGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 310 )
+		} )
+		add( new FormNonVisual( "com.jformdesigner.examples.beansbinding.clienteditor.AgeConverter" ) {
+			name: "ageConverter"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 362 )
+		} )
+		add( new FormNonVisual( "com.jformdesigner.examples.beansbinding.clienteditor.AgeValidator" ) {
+			name: "ageValidator"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 414 )
+		} )
+		add( new FormNonVisual( "com.jformdesigner.examples.beansbinding.clienteditor.MaritalStatusConverter" ) {
+			name: "maritalStatusConverter"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 466 )
+		} )
+		add( new FormNonVisual( "com.jformdesigner.examples.beansbinding.clienteditor.RequiredStringValidator" ) {
+			name: "requiredStringValidator"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 518 )
+		} )
+		add( new FormNonVisual( "com.jformdesigner.examples.beansbinding.clienteditor.EmailValidator" ) {
+			name: "emailValidator"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 570 )
+		} )
+		addBindingGroup( new FormBindingGroup( class org.jdesktop.beansbinding.BindingGroup ) {
+			addBinding( new FormBinding( "this", "${client.firstName}", "firstNameTextField", "text" ) {
+				"name": "firstName"
+			} )
+			addBinding( new FormBinding( "this", "${client.surname}", "surnameTextField", "text" ) {
+				"name": "surname"
+				"validator": new FormReference( "requiredStringValidator" )
+			} )
+			addBinding( new FormBinding( "this", "${client.maritalStatus}", "maritalComboBox", "selectedItem" ) {
+				"name": "maritalStatus"
+				"converter": new FormReference( "maritalStatusConverter" )
+			} )
+			addBinding( new FormBinding( "this", "${client.sex}", "maleRadioButton", "selected" ) {
+				"name": "sex"
+			} )
+			addBinding( new FormBinding( "this", "${client.age}", "ageTextField", "text" ) {
+				"name": "age"
+				"converter": new FormReference( "ageConverter" )
+				"validator": new FormReference( "ageValidator" )
+			} )
+			addBinding( new FormBinding( "this", "${client.nickname}", "nicknameTextField", "text" ) {
+				"name": "nickname"
+			} )
+			addBinding( new FormBinding( "this", "${client.email}", "emailTextField", "text" ) {
+				"name": "email"
+				"validator": new FormReference( "emailValidator" )
+			} )
+			addBinding( new FormBinding( "this", "${client.web}", "webTextField", "text" ) {
+				"name": "web"
+			} )
+			addBinding( new FormBinding( "this", "${client.im}", "imTextField", "text" ) {
+				"name": "im"
+			} )
+			addBinding( new FormBinding( "this", "${client.firstName} ${client.surname}", "usernameLabel", "text" ) {
+				"name": "displayNameTitle"
+			} )
+		} )
+	}
+}

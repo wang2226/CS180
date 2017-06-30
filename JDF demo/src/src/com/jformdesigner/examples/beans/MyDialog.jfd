@@ -1,0 +1,50 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "com.jformdesigner.examples.beans.JBaseDialog", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0, 0:1.0"
+			"$rowSpecs": "0, 0"
+			"$hGap": 5
+			"$vGap": 5
+			"$alignLeft": true
+			"$alignTop": true
+		} ) {
+			name: "this"
+			"title": "My Dialog"
+			"helpVisible": true
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "text"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField1"
+				"columns": 30
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "text"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox1"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

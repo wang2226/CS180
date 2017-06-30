@@ -1,0 +1,93 @@
+JFDML JFormDesigner: "5.2.4.1.329" Java: "1.8.0_112-release" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "max(pref;50dlu), labelcompgap, 50dlu, labelcompgap, 100dlu:grow"
+			"$rowSpecs": "pref, linegap, pref, linegap, pref, linegap, pref, linegap, pref, linegap, pref, linegap, pref, linegap, default"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "nameLabel"
+				"text": "Name:"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "nametField"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 3
+				"gridWidth": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "phoneLabel"
+				"text": "Phone:"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 3
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "phoneField"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 3
+				"gridY": 3
+				"gridWidth": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "zipCityLabel"
+				"text": "ZIP / City:"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 5
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "zipField"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 3
+				"gridY": 5
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "cityField"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 5
+				"gridY": 5
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "countryLabel"
+				"text": "Country:"
+				auxiliary() {
+					"JavaCodeGenerator.variableLocal": true
+				}
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridY": 7
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "countryField"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 3
+				"gridY": 7
+				"gridWidth": 3
+			} )
+			add( new FormComponent( "javax.swing.JTextPane" ) {
+				name: "textPane1"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 15
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

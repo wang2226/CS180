@@ -1,0 +1,28 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+new FormModel {
+	"i18n.bundlePackage": "com.jformdesigner.examples.i18n.xml"
+	"i18n.bundleName": "I18nXmlExample"
+	"i18n.keyPrefix": "I18nXmlTest"
+	"i18n.autoExternalize": true
+	contentType: "form/swing"
+	root: new FormRoot {
+		auxiliary() {
+			"JavaCodeGenerator.i18nGetBundleFormat": "ResourceBundle.getBundle(${bundleName}, new XMLResourceBundle.Control())"
+		}
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": new FormMessage( null, "I18nXmlTest.label1.text" )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": new FormMessage( null, "I18nXmlTest.button1.text" )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}

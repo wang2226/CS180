@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FoilMakerServer:jar">
+    <output-path>$USER_HOME$/work/server</output-path>
+    <root id="archive" name="FoilMakerServer.jar">
+      <element id="module-output" name="FoilMakerServer" />
+    </root>
+  </artifact>
+</component>

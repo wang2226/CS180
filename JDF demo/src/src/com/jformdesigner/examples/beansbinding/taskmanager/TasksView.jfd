@@ -1,0 +1,92 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$columnSpecs": "0:1.0"
+			"$rowSpecs": "0:1.0, 0"
+			"$alignTop": true
+			"$alignLeft": true
+			"$hGap": 5
+			"$vGap": 5
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "tasksScrollPane"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "tasksTable"
+					"preferredScrollableViewportSize": new java.awt.Dimension( 450, 200 )
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0:1.0, 80, 80, 80"
+				"$rowSpecs": "center:0:1.0"
+				"$alignTop": true
+				"$alignLeft": true
+				"$hGap": 5
+				"$vGap": 5
+			} ) {
+				name: "buttonPanel"
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "newTaskButton"
+					"text": "New..."
+					"mnemonic": 78
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "newTask", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "editTaskButton"
+					"text": "Edit..."
+					"mnemonic": 69
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "editTask", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "deleteTaskButton"
+					"text": "Delete"
+					"mnemonic": 68
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "deleteTask", false ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 3
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 460, 315 )
+		} )
+		addBindingGroup( new FormBindingGroup( class org.jdesktop.beansbinding.BindingGroup ) {
+			"name": "bindingGroup"
+			addBinding( new FormBinding( "this", "tasks", "tasksTable", "elements" ) {
+				"subBindings": new com.jformdesigner.model.FormBinding[ new FormBinding( null, "title", null, null ) {
+					"sourcePathType": class java.lang.String
+					"columnName": "Title"
+					"columnClass": "java.lang.String"
+				}, new FormBinding( null, "category", null, null ) {
+					"sourcePathType": class java.lang.String
+					"columnName": "Category"
+					"columnClass": "java.lang.String"
+				}, new FormBinding( null, "priority", null, null ) {
+					"sourcePathType": class com.jformdesigner.examples.beansbinding.taskmanager.Task$Priority
+					"columnName": "Priority"
+					"columnClass": "com.jformdesigner.examples.beansbinding.taskmanager.Task$Priority"
+				}, new FormBinding( null, "completed", null, null ) {
+					"columnName": "Completed"
+					"columnClass": "java.lang.Boolean"
+				} ]
+			} )
+			addBinding( new FormBinding( "tasksTable", "${selectedElement != null}", "editTaskButton", "enabled" ) )
+			addBinding( new FormBinding( "tasksTable", "${selectedElement != null}", "deleteTaskButton", "enabled" ) )
+		} )
+	}
+}

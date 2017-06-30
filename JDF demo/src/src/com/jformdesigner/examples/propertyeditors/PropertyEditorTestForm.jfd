@@ -1,0 +1,23 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormNonVisual( "com.jformdesigner.examples.propertyeditors.PropertyEditorTestBean" ) {
+			name: "propertyEditorTestBean1"
+			"myImmutablePropertyData": new com.jformdesigner.examples.propertyeditors.MyImmutablePropertyData( "a", "ba" )
+			"myPropertyData": new com.jformdesigner.examples.propertyeditors.MyPropertyData {
+				value1: "ca"
+				value2: "d"
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+		} )
+	}
+}

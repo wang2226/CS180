@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE"
+ content="text/html; charset=ISO-8859-1">
+  <title>JFormDesigner Examples README</title>
+  <style>
+  body { margin: 1cm;
+    font-family: 'Trebuchet ms',Verdana,Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 10pt;
+    }
+
+  h2 { border-bottom: 1px solid rgb(153, 153, 153);
+    }
+
+  li { margin-bottom: 10pt;
+    }
+
+  .main { padding: 1pt 5pt;
+    background-color: rgb(245, 244, 240);
+    font-size: 8pt;
+    }
+
+
+  </style>
+</head>
+<body>
+<div style="max-width: 50em;">
+<h1>JFormDesigner Examples README</h1>
+<h2>Introduction</h2>
+<p>This folder contains example source code and forms.</p>
+<p>To try this examples, create a new IDE project in this folder and
+add <code>src</code> to the source folders of the project. Because
+some of the examples require <code>jfd-annotations.jar</code>, <code>jfd-loader.jar</code>
+or <code>beansbinding.jar</code>, add them to the build path of the
+project. You'll find the libraries in the JFormDesigner's <a
+ href="http://www.formdev.com/jformdesigner/doc/examples-redist/#redist"><code>redist</code></a>
+folder.</p>
+<h2>Package com.jformdesigner.examples.basic</h2>
+<ul>
+  <li><b>CodeGenExample.java/.jfd</b>: Demonstrates the use of the
+JFormDesigner generated code.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+  <li><b>LoaderExample.java/.jfd</b>: Demonstrates the use of the
+JFormDesigner <a
+ href="http://www.formdev.com/jformdesigner/doc/runtime-library/">form
+loader</a> API. Requires <code>jfd-loader.jar</code> to load forms at
+runtime.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+</ul>
+<h2>Package com.jformdesigner.examples.beans</h2>
+<p>Some custom components that demonstrate use of <a
+ href="http://www.formdev.com/jformdesigner/doc/annotations/">JFormDesigner
+Annotations</a> and implementation of BeanInfo
+classes that use JFormDesigner <a
+ href="http://www.formdev.com/jformdesigner/doc/java-beans/#beandesc_attrs">BeanDescriptor</a>
+and <a
+ href="http://www.formdev.com/jformdesigner/doc/java-beans/#propdesc_attrs">PropertyDescriptor
+Attributes</a>.</p>
+<ul>
+  <li><b>ContainerDelegateDemoPanel.java</b>: A panel that demonstrates
+the use of container delegates. It has own components and a content
+pane, where you can add more components in JFormDesigner. To test this
+panel, create a form and use "Choose Bean" to add this panel to the
+form. You'll see the components of this panel and can add additional
+components (in JFormDesigner) to the content pane.</li>
+  <li><b>JBackgroundImagePanel.java</b>: A panel that paints an image
+on the background. Demonstrates the use of <a
+ href="http://www.formdev.com/jformdesigner/doc/annotations/">JFormDesigner
+Annotations</a>.</li>
+  <li><b>JGradientPanel.java</b>: A panel that paints a gradient
+background from "background" color to "background2" color using the
+specified direction and magnitude. Demonstrates the use of <a
+ href="http://www.formdev.com/jformdesigner/doc/annotations/">JFormDesigner
+Annotations</a>.</li>
+  <li><b>JGradientPanelBIC.java</b>: This class is equal to <code>JGradientPanel</code>
+but uses a traditional BeanInfo class (BIC) <code>JGradientPanelBICBeanInfo.java</code>
+instead of annotations. Demonstrates the implementation of a BeanInfo
+class that uses JFormDesigner <a
+ href="http://www.formdev.com/jformdesigner/doc/java-beans/#beandesc_attrs">BeanDescriptor</a>
+and <a
+ href="http://www.formdev.com/jformdesigner/doc/java-beans/#propdesc_attrs">PropertyDescriptor
+Attributes</a>.</li>
+  <li><b>JBaseDialog.java/.jfd</b>: A base dialog that can be used as
+superclass for own dialogs. It includes a button bar (OK, Cancel and
+Help), adds a listener for the ESC key that closes the dialog and
+handles closing from window manager (e.g. 'x' in window title).</li>
+  <li><b>JSplitPaneWithZeroSizeDivider.java</b>: A JSplitPane that uses
+a 1 pixel thin visible divider, but a 9 pixel wide transparent drag
+area.</li>
+  <li><b>JSplitPaneWithZeroSizeDividerDemo.java</b>: Demonstrates
+JSplitPaneWithZeroSizeDivider.</li>
+  <li><b>MyDialog.java/.jfd</b>: Demonstrates the use of <code>JBaseDialog</code>.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+</ul>
+<h2>Package com.jformdesigner.examples.beansbinding.clienteditor</h2>
+<p>An example, ported from NetBeans to JFormDesigner, for using <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/beans-binding/">Beans
+Binding</a> (JSR 295). Uses binding <a
+ href="http://doc.formdev.com/beansbinding/org/jdesktop/beansbinding/Converter.html">converters</a>
+and <a
+ href="http://doc.formdev.com/beansbinding/org/jdesktop/beansbinding/Validator.html">validators</a>.</p>
+<ul>
+  <li><b>AgeConverter.java</b>: <code>Integer</code> to <code>String</code>
+converter that returns zero when the argument cannot be parsed.</li>
+  <li><b>AgeValidator.java</b>: Validator that ensures that given value
+is between 1 and 199.</li>
+  <li><b>Client.java</b>: Information about one client.</li>
+  <li><b>ClientEditor.java/.jfd</b>: Form that allows editing of
+information about one client.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+  <li><b>EmailValidator.java</b>: Validator that ensures that given
+string is an e-mail address.</li>
+  <li><b>LoggingBindingListener.java</b>: Binding listener used to log
+synchronization events. It displays (in given label) warnings for
+failed synchronizations.</li>
+  <li><b>MaritalStatusConverter.java</b>: Converter between marital
+status code and its human-readable representation.</li>
+  <li><b>RequiredStringValidator.java</b>: Validator that ensures that
+given string is not empty.</li>
+</ul>
+<h2>Package com.jformdesigner.examples.beansbinding.simple</h2>
+<p>A simple example for using <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/beans-binding/">Beans
+Binding</a> (JSR 295).</p>
+<ul>
+  <li><b>SimpleBindingDemo.java/.jfd</b>: This is a very basic example
+of
+using <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/beans-binding/">Beans
+Binding</a> (JSR 295) to bind GUI components to a data object. The
+components "Value 1" and "Value 2" are bound to "simpleData" object
+fields. The components "Copy of Value 1" and "Copy of Value 2" are also
+bound to "simpleData". Initially, the values of "simpleData" are copied
+to the GUI components. Changes in the GUI components are copied back to
+"simpleData", which fires events to inform others. So if you change
+"Value 1", the value is copied to "simpleData.value1" and then copied
+to "Copy of Value 1".<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+  <li><b>SimpleData.java</b>: Demo data model class used in <code>SimpleBindingDemo.java/.jfd</code>.</li>
+</ul>
+<h2>Package com.jformdesigner.examples.beansbinding.taskmanager</h2>
+<p>Advanced example for using <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/beans-binding/">Beans
+Binding</a> (JSR 295).</p>
+<ul>
+  <li><b>TaskView.java/.jfd</b>:&nbsp;This view shows/edits a single
+task.
+It uses <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/beans-binding/">Beans
+Binding</a> to bind the properties of <code>task</code> to input
+fields. Beans Binding is also used to enable/disable the input fields.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i> </li>
+  <li><b>TasksView.java/.jfd</b>: This view shows a list of tasks in a <code>JTable</code>
+and provides New, Edit and Delete buttons to edit the tasks. It uses <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/beans-binding/">Beans
+Binding</a> to bind the list of <code>tasks</code> to the <code>JTable</code>.
+Beans Binding is also used to enable/disable the Edit and Delete
+buttons based on selection. The New and Edit buttons use class <code>TaskView</code>
+to show/edit the selected task in a sub-dialog.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+  <li><b>TasksEmbeddedView.java/.jfd</b>: This view shows a list of
+tasks
+in a <code>JTable</code>, the selected task in an embedded <code>TaskView</code>
+and provides New and Delete buttons to edit the tasks. It uses <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/beans-binding/">Beans
+Binding</a> to bind the list of <code>tasks</code> to the <code>JTable</code>
+and the selected task to the embedded <code>TaskView</code>. Beans
+Binding is also used to enable/disable the Delete button based on
+selection. The New button uses <code>TaskView</code> to edit a new
+task in a sub-dialog.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i><br>
+  </li>
+  <li><b>Task.java</b>: Task data model class. It has getter and setter
+methods to access property values and supports property change
+listeners thru class <code>AbstractModelObject</code>.</li>
+</ul>
+<h2>Package com.jformdesigner.examples.formmodel</h2>
+<p>Examples for using <a
+ href="http://www.formdev.com/jformdesigner/doc/runtime-library/">JFormDesigner
+Runtime Library</a> to dynamically create JFormDesigner forms (*.jfd).
+All examples in this package require <code>jfd-loader.jar</code>.</p>
+<ul>
+  <li><b>CreateFormLayoutFormExample.java</b>: Demonstrates how to use
+the JFormDesigner form model API and form saver API to dynamically
+create a form file from a list of properties using <a
+ href="http://www.formdev.com/jformdesigner/doc/layouts/formlayout/">FormLayout</a>.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+  <li><b>CreateGridBagLayoutFormExample.java</b>: Demonstrates how to
+use the JFormDesigner form model API and form saver API to dynamically
+create a form file from a list of properties using <a
+ href="http://www.formdev.com/jformdesigner/doc/layouts/gridbaglayout/">GridBagLayout</a>.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+  <li><b>DumpFormFile.java</b>: Loads JFormDesigner form files (*.jfd)
+and dumps the content. Demonstrates the use of the JFormDesigner form
+loader API.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+  <li><b>FormSaverExamples.java</b>: Demonstrates how to use the
+JFormDesigner form model API and form saver API to create form files
+using various layout managers. It creates in-memory form models and
+saves them to .jfd files.<br>
+    <i class="main"> Run the <code>main()</code> method of this file
+to test this example.</i></li>
+</ul>
+<h2>Package com.jformdesigner.examples.i18n.xml</h2>
+<p>Examples for using XML resource bundles.</p>
+<ul>
+  <li><b>I18nXmlExample.java/.jfd</b>: Test form that uses a XML
+resource bundle.</li>
+  <li><b>I18nXmlExample.xml</b>: XML resource bundle.</li>
+  <li><b>XMLResourceBundle.java</b>: Resource bundle class that reads
+XML properties files.</li>
+</ul>
+<h2>Package com.jformdesigner.examples.propertyeditors</h2>
+<p>Examples for implementing property editors for complex property
+values. Property editors are used in the JFormDesigner <a
+ href="http://www.formdev.com/jformdesigner/doc/ui/properties-view/">Properties</a>
+view.</p>
+<ul>
+  <li><b>MyImmutablePropertyData.java</b>: This is a immutable custom
+type used as property values. Immutable means that it has no methods to
+modify its value.</li>
+  <li><b>MyImmutablePropertyDataEditor.java</b>: Property editor for <code>MyImmutablePropertyData</code>.
+This property editor demonstrates how to build a custom editor and how
+to update the property values on changes.</li>
+  <li><b>MyPropertyData.java</b>: This is a (mutable) custom type used
+as property values. Mutable means that it has setter methods to modify
+its value.</li>
+  <li><b>MyPropertyDataEditor.java</b>: Property editor for <code>MyPropertyData</code>.
+This property editor demonstrates how to build a custom editor and how
+to update the property values on changes.</li>
+  <li><b>PropertyEditorTestBean.java</b>: This is a (non-visual) bean
+to test the property editors. It uses <code>MyPropertyData</code> and <code>MyImmutablePropertyData</code>.
+Use "Choose Bean" in JFormDesigner to add it to a form.</li>
+  <li><b>PropertyEditorTestForm.java/.jfd</b>: Test form for property
+editors.</li>
+</ul>
+<p><br>
+Copyright &copy; 2004-2011 FormDev Software GmbH. All rights
+reserved.</p>
+</div>
+</body>
+</html>

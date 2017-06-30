@@ -1,0 +1,126 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+			"$alignTop": true
+			"$alignLeft": true
+			"$columnSpecs": "0, 0:1.0"
+			"$rowSpecs": "0, 80, 0, 0, 0"
+			"$hGap": 5
+			"$vGap": 5
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "titleLabel"
+				"text": "Title:"
+				"labelFor": new FormReference( "titleField" )
+				"displayedMnemonic": 84
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "titleField"
+				"columns": 20
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "descriptionLabel"
+				"text": "Description:"
+				"labelFor": new FormReference( "descriptionField" )
+				"displayedMnemonic": 68
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 1
+				"vAlign": 1
+				"insets": new java.awt.Insets( 3, 0, 0, 0 )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "descriptionScrollPane"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "descriptionField"
+					"columns": 30
+					"font": new com.jformdesigner.model.SwingFont( "TextField.font" )
+					"lineWrap": true
+					"wrapStyleWord": true
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "categoryLabel"
+				"text": "Category:"
+				"displayedMnemonic": 67
+				"labelFor": new FormReference( "categoryField" )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 2
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "categoryField"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "priorityLabel"
+				"text": "Priority:"
+				"labelFor": new FormReference( "priorityField" )
+				"displayedMnemonic": 80
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 3
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "priorityField"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 3
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "statusLabel"
+				"text": "Status:"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridy": 4
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "completedCheckBox"
+				"text": "Completed"
+				"mnemonic": 79
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+				"gridx": 1
+				"gridy": 4
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 505, 285 )
+		} )
+		addBindingGroup( new FormBindingGroup( class org.jdesktop.beansbinding.BindingGroup ) {
+			"name": "bindingGroup"
+			addBinding( new FormBinding( "this", "task.title", "titleField", "text" ) )
+			addBinding( new FormBinding( "this", "task.description", "descriptionField", "text" ) )
+			addBinding( new FormBinding( "this", "categories", "categoryField", "elements" ) )
+			addBinding( new FormBinding( "this", "task.category", "categoryField", "selectedItem" ) )
+			addBinding( new FormBinding( "this", "priorities", "priorityField", "elements" ) )
+			addBinding( new FormBinding( "this", "task.priority", "priorityField", "selectedItem" ) )
+			addBinding( new FormBinding( "this", "task.completed", "completedCheckBox", "selected" ) )
+		} )
+		addBindingGroup( new FormBindingGroup( class org.jdesktop.beansbinding.BindingGroup ) {
+			"name": "enablementBindingGroup"
+			addBinding( new FormBinding( "this", "${task != null}", "titleField", "editable" ) )
+			addBinding( new FormBinding( "this", "${task != null}", "descriptionField", "editable" ) )
+			addBinding( new FormBinding( "this", "${task != null}", "categoryField", "enabled" ) )
+			addBinding( new FormBinding( "this", "${task != null}", "priorityField", "enabled" ) )
+			addBinding( new FormBinding( "this", "${task != null}", "completedCheckBox", "enabled" ) )
+			addBinding( new FormBinding( "titleField", "editable", "titleLabel", "enabled" ) )
+			addBinding( new FormBinding( "descriptionField", "editable", "descriptionLabel", "enabled" ) )
+			addBinding( new FormBinding( "categoryField", "enabled", "categoryLabel", "enabled" ) )
+			addBinding( new FormBinding( "priorityField", "enabled", "priorityLabel", "enabled" ) )
+			addBinding( new FormBinding( "completedCheckBox", "enabled", "statusLabel", "enabled" ) )
+		} )
+	}
+}

@@ -1,0 +1,116 @@
+JFDML JFormDesigner: "5.2.4.1.329" Java: "1.8.0_112-release" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {comp optionPanel:::::x, space :::p, comp outputPanel:::p::p, space :::p}, seq l {space :p:258:p, comp submitButton:::p:123:p, space :::x}}"
+			"$verticalGroup": "par l {seq l {space :::p, par l:::p {comp outputPanel:::::x, comp optionPanel:::::x}, space s:::p, comp submitButton:::p::p, space ::38:x}}"
+		} ) {
+			name: "mainFrame"
+			"background": sfield java.awt.Color lightGray
+			"title": "Pizza Shop"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp outputtextArea:::p:169:p, space ::14:x}}"
+				"$verticalGroup": "par l {seq l {comp outputtextArea:::p:339:p, space :0:0:x}}"
+			} ) {
+				name: "outputPanel"
+				"border": new javax.swing.border.TitledBorder( "Output" )
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "outputtextArea"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {par t {comp sizePanel::l:::x, comp toppingsPanel::t:::x, comp stylePanel::t:::x}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::x, comp sizePanel:::p::p, space s:::p, comp stylePanel:::p::p, space s:::p, comp toppingsPanel:::p::p}}"
+			} ) {
+				name: "optionPanel"
+				"border": new javax.swing.border.TitledBorder( "Options" )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq {space :p:73:p, comp smallradioButton:1::p::p, space :::p, comp mediumradioButton:1::p::p, space :p:26:p, comp largeradioButton:1::p:81:p, space :::p}}"
+					"$verticalGroup": "par l {par b:l {comp mediumradioButton:2:b:p:83:p, comp largeradioButton:2:b:p:83:p, comp smallradioButton:2:b:p:83:p}}"
+				} ) {
+					name: "sizePanel"
+					"border": new javax.swing.border.TitledBorder( "Select your pizza size" )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "smallradioButton"
+						"text": "Small"
+						"$buttonGroup": new FormReference( "sizebuttonGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "smallradioButtonActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "mediumradioButton"
+						"text": "Medium"
+						"$buttonGroup": new FormReference( "sizebuttonGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "mediumradioButtonActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JRadioButton" ) {
+						name: "largeradioButton"
+						"text": "Large"
+						"$buttonGroup": new FormReference( "sizebuttonGroup" )
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "largeradioButtonActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq t {space :::x, comp stylecomboBox:::p:140:p, space :p:90:p}}"
+					"$verticalGroup": "par l {seq l {space :p:21:p, comp stylecomboBox:::p::p, space ::28:x}}"
+				} ) {
+					name: "stylePanel"
+					"border": new javax.swing.border.TitledBorder( "Select your pizza style" )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "stylecomboBox"
+						"model": new javax.swing.DefaultComboBoxModel {
+							selectedItem: "Margherita"
+							addElement( "Margherita" )
+							addElement( "Prosciutoo" )
+							addElement( "Diavola" )
+							addElement( "Verdure" )
+						}
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "stylecomboBoxActionPerformed", true ) )
+					} )
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+					"$horizontalGroup": "par l {seq l {space :::p, comp garliccheckBox:::p::p, space s:::p, comp jalapenoscheckBox:::p::p, space s:::p, comp extracheesekBox:::p::p, space s:::p, comp baconcheckBox:::p::p, space :::x}}"
+					"$verticalGroup": "par l {seq l {space :p:25:p, par b {comp garliccheckBox::b:p::p, comp jalapenoscheckBox::b:p::p, comp extracheesekBox::b:p::p, comp baconcheckBox::b:p::p}, space ::28:x}}"
+				} ) {
+					name: "toppingsPanel"
+					"border": new javax.swing.border.TitledBorder( "Choose your toppings" )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "garliccheckBox"
+						"text": "Garlic"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "garliccheckBoxActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "jalapenoscheckBox"
+						"text": "Jalapenos"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "jalapenoscheckBoxActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "extracheesekBox"
+						"text": "Extra Cheese"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "extracheesekBoxActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JCheckBox" ) {
+						name: "baconcheckBox"
+						"text": "Bacon"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "baconcheckBoxActionPerformed", true ) )
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "submitButton"
+				"text": "Submit"
+				"actionCommand": "Submit"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "submitButtonActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 20, 20 )
+			"size": new java.awt.Dimension( 620, 495 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "sizebuttonGroup"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 531 )
+		} )
+	}
+}

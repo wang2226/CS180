@@ -1,0 +1,170 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	root: new FormRoot {
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jgoodies.forms.layout.FormLayout ) {
+			"$columnSpecs": "max(pref;50dlu), lcgap, 100dlu:grow, lcgap, max(pref;10dlu)"
+			"$rowSpecs": "default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default, linegap, default"
+		} ) {
+			name: "panel3"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label11"
+				"text": "text"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 1
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField4"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 3
+				"gridY": 1
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField5"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 3
+				"gridY": 3
+				"gridHeight": 7
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "text"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 5
+				"gridY": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label12"
+				"text": "text"
+			}, new FormLayoutConstraints( class com.jgoodies.forms.layout.CellConstraints ) {
+				"gridX": 1
+				"gridY": 3
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 85 )
+			"size": new java.awt.Dimension( 384, 184 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "label1"
+			"text": "JGoodies FormLayout"
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			"opaque": true
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 65 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "label3"
+			"text": "BorderLayout"
+			"opaque": true
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 290 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "panel5"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "text"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "North"
+			} )
+			add( new FormComponent( "javax.swing.JTree" ) {
+				name: "tree2"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": "text"
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "South"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 310 )
+			"size": new java.awt.Dimension( 268, 109 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "label4"
+			"text": "FlowLayout"
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			"opaque": true
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 440 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.FlowLayout ) ) {
+			name: "panel6"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField2"
+				"columns": 10
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textField3"
+				"columns": 10
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button2"
+				"text": "text"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 460 )
+			"size": new java.awt.Dimension( 209, 118 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "label2"
+			"text": "BoxLayout"
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			"opaque": true
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 605 )
+		} )
+		add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class javax.swing.BoxLayout ) {
+			"axis": 0
+		} ) {
+			name: "panel1"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JCheckBox" ) {
+				name: "checkBox1"
+				"text": "text"
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioButton1"
+				"text": "text"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 625 )
+			"size": new java.awt.Dimension( 246, 83 )
+		} )
+		add( new FormComponent( "javax.swing.JLabel" ) {
+			name: "label10"
+			"text": "<html>Here you can play with the different supported layout managers. Try adding, moving or resizing components. Or insert, remove or move columns/rows in the FormLayout panel. Get a feeling about the feedback. Enjoy yourself!</html>"
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			"opaque": true
+			"verticalAlignment": 1
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 60 )
+		} )
+	}
+}

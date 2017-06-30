@@ -1,0 +1,131 @@
+JFDML JFormDesigner: "9.9.9.9.9999" Java: "1.6.0_26" encoding: "UTF-8"
+
+/*
+  This file is part of JFormDesigner.
+  Copyright (C) 2011 Karl Tauber <karl@jformdesigner.com>
+  All Rights Reserved
+*/
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"title": "SimpleBindingDemo"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.BorderLayout ) ) {
+				name: "dialogPane"
+				"border": new javax.swing.border.EmptyBorder( 12, 12, 12, 12 )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0, 0:1.0"
+					"$rowSpecs": "160, 0, 0, 30, 0, 0, 30"
+					"$hGap": 5
+					"$vGap": 5
+					"$alignLeft": true
+					"$alignTop": true
+				} ) {
+					name: "contentPanel"
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "infoLabel"
+						"text": "<html>This is a very basic example of using Beans Binding (JSR 295) to bind GUI components to a data object. The components 'Value 1' and 'Value 2' are bound to 'simpleData' object fields. The components 'Copy of Value 1' and 'Copy of Value 2' are also bound to 'simpleData'.<br><br>Initially, the values of 'simpleData' are copied to the GUI components. Changes in the GUI components are copied back to 'simpleData', which fires events to inform others. So if you change 'Value 1', the value is copied to 'simpleData.value1' and then copied to 'Copy of Value 1'.</html>"
+						"preferredSize": new java.awt.Dimension( 450, 160 )
+						"verticalAlignment": 1
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridwidth": 2
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "value1Label"
+						"text": "Value 1"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 1
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "value1Field"
+						"columns": 20
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 1
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "value2Label"
+						"text": "Value 2:"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 2
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "value2Field"
+						"columns": 20
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 2
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "copyOfValue1Label"
+						"text": "Copy of Value 1"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 4
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "copyOfValue1Field"
+						"columns": 20
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 4
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "copyOfValue2Label"
+						"text": "Copy of Value 2:"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridy": 5
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "copyOfValue2Field"
+						"columns": 20
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 5
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "Center"
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+					"$columnSpecs": "0:1.0, 80"
+					"$rowSpecs": "0"
+					"$hGap": 5
+					"$vGap": 5
+				} ) {
+					name: "buttonBar"
+					"border": new javax.swing.border.EmptyBorder( 12, 0, 0, 0 )
+					add( new FormComponent( "javax.swing.JButton" ) {
+						name: "okButton"
+						"text": "OK"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "okButtonActionPerformed", false ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+						"gridx": 1
+						"gridy": 0
+					} )
+				}, new FormLayoutConstraints( class java.lang.String ) {
+					"value": "South"
+				} )
+			}, new FormLayoutConstraints( class java.lang.String ) {
+				"value": "Center"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 450 )
+		} )
+		add( new FormNonVisual( "com.jformdesigner.examples.beansbinding.simple.SimpleData" ) {
+			name: "simpleData"
+			"value1": "test value 1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 420, 0 )
+		} )
+		addBindingGroup( new FormBindingGroup( class org.jdesktop.beansbinding.BindingGroup ) {
+			"name": "bindingGroup"
+			addBinding( new FormBinding( "simpleData", "value1", "value1Field", "text" ) )
+			addBinding( new FormBinding( "simpleData", "value2", "value2Field", "text" ) )
+			addBinding( new FormBinding( "simpleData", "value1", "copyOfValue1Field", "text" ) )
+			addBinding( new FormBinding( "simpleData", "value2", "copyOfValue2Field", "text" ) )
+		} )
+	}
+}

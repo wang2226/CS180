@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ADT/ADT.iml" filepath="$PROJECT_DIR$/ADT/ADT.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CS180.iml" filepath="$PROJECT_DIR$/CS180.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DynamicArray/DynamicArray.iml" filepath="$PROJECT_DIR$/DynamicArray/DynamicArray.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoilMakerClient/FoilMakerClient.iml" filepath="$PROJECT_DIR$/FoilMakerClient/FoilMakerClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FoilMakerServer/FoilMakerServer.iml" filepath="$PROJECT_DIR$/FoilMakerServer/FoilMakerServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDF demo/JDF demo.iml" filepath="$PROJECT_DIR$/JDF demo/JDF demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LinkedList/LinkedList.iml" filepath="$PROJECT_DIR$/LinkedList/LinkedList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MVC demo/MVC demo.iml" filepath="$PROJECT_DIR$/MVC demo/MVC demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PracticeMidterm1/PracticeMidterm1.iml" filepath="$PROJECT_DIR$/PracticeMidterm1/PracticeMidterm1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Recursive/Recursive.iml" filepath="$PROJECT_DIR$/Recursive/Recursive.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Test/Test.iml" filepath="$PROJECT_DIR$/Test/Test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Textbook/Textbook.iml" filepath="$PROJECT_DIR$/Textbook/Textbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw01/hw01.iml" filepath="$PROJECT_DIR$/hw01/hw01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw02/hw02.iml" filepath="$PROJECT_DIR$/hw02/hw02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw03/hw03.iml" filepath="$PROJECT_DIR$/hw03/hw03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw04/hw04.iml" filepath="$PROJECT_DIR$/hw04/hw04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw05/hw05.iml" filepath="$PROJECT_DIR$/hw05/hw05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw06/hw06.iml" filepath="$PROJECT_DIR$/hw06/hw06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw07/hw07.iml" filepath="$PROJECT_DIR$/hw07/hw07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw08/hw08.iml" filepath="$PROJECT_DIR$/hw08/hw08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw09/hw09.iml" filepath="$PROJECT_DIR$/hw09/hw09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hw10/hw10.iml" filepath="$PROJECT_DIR$/hw10/hw10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab05/lab05.iml" filepath="$PROJECT_DIR$/lab05/lab05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab06/lab06.iml" filepath="$PROJECT_DIR$/lab06/lab06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab07/lab07.iml" filepath="$PROJECT_DIR$/lab07/lab07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab08/lab08.iml" filepath="$PROJECT_DIR$/lab08/lab08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab09/lab09.iml" filepath="$PROJECT_DIR$/lab09/lab09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab11_client/lab11_client.iml" filepath="$PROJECT_DIR$/lab11_client/lab11_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab11_server/lab11_server.iml" filepath="$PROJECT_DIR$/lab11_server/lab11_server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab12/lab12.iml" filepath="$PROJECT_DIR$/lab12/lab12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab13/lab13.iml" filepath="$PROJECT_DIR$/lab13/lab13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab14/lab14.iml" filepath="$PROJECT_DIR$/lab14/lab14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mytest/mytest.iml" filepath="$PROJECT_DIR$/mytest/mytest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project01/project01.iml" filepath="$PROJECT_DIR$/project01/project01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project02/project02.iml" filepath="$PROJECT_DIR$/project02/project02.iml" />
+    </modules>
+  </component>
+</project>
